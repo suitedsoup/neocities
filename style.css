@@ -1,0 +1,205 @@
+/* CSS is how you can add style to your website, such as colors, fonts, and positioning of your
+   HTML content. To learn how to do something, just try searching Google for questions like
+   "how to change link color." */
+
+body {
+  background-color: #1d0b00;
+  /*background-image: url("resources/pink-background.png");*/
+  background-repeat: repeat;
+  background-size: 360px;
+  color: black;
+  font-family: Verdana;
+}
+
+
+nav {
+    background-color: #1d0b00;
+    position: sticky;
+    top: 0;
+}
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+nav ul li a {
+    display: block;
+    padding: 14px 16px;
+    text-decoration: none;
+    color: #9a6b74;
+}
+nav ul li p {
+    display: block;
+    margin: 0;
+    padding: 14px 16px;
+    text-decoration: none;
+    color: #9a6b74;
+}
+nav ul li a:hover {
+    color: white;
+}
+
+#page-header {
+    padding: 0px 100px 20px 100px;
+}
+#homebanner {
+    width: 100%;
+}
+
+.page-container {
+    max-width: 1080px;
+    min-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    background-color: #9a6b74;
+    border-style: solid;
+    border-width: 4px;
+    border-radius: 3px;
+    border-color: #0a0106;
+}  
+.text-container {
+    padding: 20px 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.content-item {
+    padding: 0px 20px;
+}
+#left-container {
+    flex-basis: 0;
+    flex-grow: 1;
+    justify-content: center;
+}
+#middle-container {
+    flex-basis: 0;
+    flex-grow: 3;
+    border-left: 4px double #0a0106;
+    border-right: 4px double #0a0106;
+}
+#right-container {
+    flex-basis: 0;
+    flex-grow: 1;
+}
+
+#pfp {
+    width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 300px;
+    padding: 0px 0px 20px 0px;
+    border-bottom: 5px dotted #0a0106;
+}
+
+#profile {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+#profile h2 {
+    margin: 5px;
+    width: 100%;
+    text-align: center;
+}
+#profile p {
+    padding: 0px;
+    margin: 2px;
+    font-style: italic;
+}
+
+.links {
+    display: flex;
+    flex-direction:column;
+}
+.link {
+    display: flex;
+    flex-direction: row;
+    height: 20px;
+    align-items: center;
+}
+.link a {
+    height: 100%;
+    margin-right: 10px;
+}
+.link a img {
+    height: 100%;
+}
+.link p {
+    margin: 0px;
+    font-weight: bold;
+}
+
+.blurb {
+    border-bottom: 5px dotted #0a0106;
+}
+.blurb h3 {
+    margin: 8px 0px 5px 0px;
+}
+.blurb p {
+    margin: 0px 0px 10px 0px;
+}
+.blurbnote {
+    font-style: italic;
+    font-weight: normal;
+    font-size: 0.875em;
+}
+.blurbnote a {
+    color: #0a0106;
+}
+details {
+    margin-bottom: 20px;
+}
+summary {
+    font-size: 1.3em;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.book {
+    border-bottom: 5px dotted #0a0106;
+    padding: 10px 0px;
+    display: flex;
+}
+.book img {
+    width: 100px;
+    margin-right: 10px;
+}
+.book h3 {
+    font-style: italic;
+    margin: 0px 0px 5px 0px;
+}
+.book p {
+    margin: 0px 0px 5px 0px;
+    font-size: 0.9em;
+}
+.readlinks a {
+    color: #0a0106;
+}
+.featuredbook a {
+    color: #0a0106;
+}
+
+@media (max-width: 600px) {
+    .page-container { width: 300px; }
+    .text-container { flex-direction: column; }
+}
+@media (min-width: 600px) {
+    .page-container { width: 400px; }
+    .text-container { flex-direction: column; }
+}
+@media (min-width: 768px) {
+    .page-container { width: 600px; }
+    .text-container { flex-direction: column; }
+}
+@media (min-width: 992px) {
+    .page-container { width: 800px; }
+    .text-container { flex-direction: row; }
+}
+@media (min-width: 1200px) {
+    .page-container { width: 1080px; }
+    .text-container { flex-direction: row; }
+}
