@@ -1,4 +1,11 @@
 @import url("https://use.typekit.net/xsm3dxa.css");
+
+:root {
+    --light-green: #d8e9d3;
+    --dark-green: #294c30;
+    --desat-green: #bac9bd;
+}
+
 h1, h2, h3, h4, details {
     font-family: "olivita", "verdana", sans-serif;
     font-weight: normal;
@@ -7,9 +14,7 @@ p, ul, a {
     font-family: "hoss-round-xnarrow", "arial", sans-serif;
 }
 body {
-  background-color: #660033; /*#1d0b00;*/
-  background-image: url("resources/souprepeat.jpg");
-  background-size: 200px;
+  background-color: var(--dark-green); /*#1d0b00;*/
   background-repeat: repeat;
   color: black;
   font-family: Verdana;
@@ -17,59 +22,71 @@ body {
 
 
 nav {
-    background-color: #1d0b00;
+    background-color: var(--light-green);
     position: sticky;
-    top: 0;
+    border: 4px solid black;
+    border-radius: 20px;
+    margin: 330px auto auto auto;
+    width: auto;
+    min-width: 220px;
+    top: 25px;
 }
 nav ul {
     list-style-type: none;
-    margin: 0;
-    padding: 0;
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    padding: 5px 30px;
+}
+nav ul li h3 {
+    margin: 0px;
 }
 nav ul li a {
     display: block;
-    padding: 14px 16px;
-    text-decoration: none;
-    color: #ff9999;
-}
-nav ul li p {
-    display: block;
-    margin: 0;
-    padding: 14px 16px;
-    text-decoration: none;
-    color: #ff9999;
+    margin-left: 20px;
+    padding: 5px;
+    color: var(--dark-green);
+    border-bottom: 2px solid var(--desat-green);
 }
 nav ul li a:hover {
     color: white;
+    text-shadow: 0 0 8px #112515;
 }
 
-#page-header {
-    padding: 0px 100px 20px 100px;
-}
-#homebanner {
-    width: 100%;
-    border-bottom: 4px solid #0a0106;
-}
+
 
 .page-container {
-    max-width: 1080px;
+    width: 80%;
+    max-width: 1400px;
     min-width: 500px;
+    padding-right: 220px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 50px;
-    background-color: #ff9999; /*#9a6b74;*/
-    border-style: solid;
-    border-width: 4px;
-    border-radius: 3px;
-    border-color: #0a0106;
-}  
-.text-container {
-    padding: 20px 50px;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+}  
+
+.text-container {
+    max-width: 1080px;
+    min-width: 500px;
+    padding: 20px 50px;
+    display: grid;
+    grid-template-columns: 20% auto 20%;
+    padding: 0px 0px 20px 0px;
+    background-color: var(--light-green);
+    border-radius: 20px;
+    border: 4px solid black;
+}
+#pagebanner {
+    width: 100%;
+    grid-column: 1 / -1;
+    border-bottom: 4px solid black;
+    border-radius: 16px 16px 0px 0px;
+}
+#page-header {
+    padding: 0px 100px 20px 100px;
+    grid-column: 1 / -1;
 }
 .content-item {
     padding: 0px 20px;
@@ -82,8 +99,8 @@ nav ul li a:hover {
 #middle-container {
     flex-basis: 0;
     flex-grow: 3;
-    border-left: 4px double #0a0106;
-    border-right: 4px double #0a0106;
+    border-left: 4px double var(--desat-green);
+    border-right: 4px double var(--desat-green);
 }
 #right-container {
     flex-basis: 0;
@@ -97,7 +114,7 @@ nav ul li a:hover {
     margin-right: auto;
     max-width: 300px;
     padding: 0px 0px 20px 0px;
-    border-bottom: 5px dotted #0a0106;
+    border-bottom: 5px dotted var(--desat-green);
 }
 
 #profile {
@@ -139,7 +156,7 @@ nav ul li a:hover {
 }
 
 .blurb {
-    border-bottom: 5px dotted #0a0106;
+    border-bottom: 5px dotted var(--desat-green);
 }
 .blurb h3 {
     margin: 8px 0px 5px 0px;
@@ -153,7 +170,7 @@ nav ul li a:hover {
     font-size: 0.875em;
 }
 .blurbnote a {
-    color: #0a0106;
+    color: var(--dark-green);
 }
 details {
     margin-bottom: 20px;
@@ -165,7 +182,7 @@ summary {
 }
 
 .book {
-    border-bottom: 5px dotted #0a0106;
+    border-bottom: 5px dotted var(--desat-green);
     padding: 10px 0px;
     display: flex;
 }
@@ -197,7 +214,7 @@ summary {
     margin-bottom: 10px;
 }
 
-@media (max-width: 600px) {
+/*@media (max-width: 600px) {
     .page-container { width: 300px; }
     .text-container { flex-direction: column; }
 }
@@ -216,4 +233,4 @@ summary {
 @media (min-width: 1200px) {
     .page-container { width: 1080px; }
     .text-container { flex-direction: row; }
-}
+}*/
