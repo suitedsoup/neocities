@@ -4,6 +4,7 @@
     --light-green: #d8e9d3;
     --dark-green: #294c30;
     --desat-green: #bac9bd;
+    --medium-green: #668f77;
 }
 
 h1, h2, h3, h4, details {
@@ -14,7 +15,9 @@ p, ul, a {
     font-family: "hoss-round-xnarrow", "arial", sans-serif;
 }
 body {
-  background-color: var(--dark-green); /*#1d0b00;*/
+  background-color: var(--medium-green); /*#1d0b00;*/
+  background-image: url("resources/dotbackground.png");
+  background-size: 150px;
   background-repeat: repeat;
   color: black;
   font-family: Verdana;
@@ -24,87 +27,93 @@ body {
 nav {
     background-color: var(--light-green);
     position: sticky;
-    border: 4px solid black;
-    border-radius: 20px;
-    margin: 330px auto auto auto;
     width: auto;
     min-width: 220px;
-    top: 25px;
+    display: flex;
+    flex-direction: column;
+    border-top: 4px solid black;
+    border-bottom: 4px solid black;
+}
+nav h3 {
+    margin: 2px auto;
 }
 nav ul {
     list-style-type: none;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
-    padding: 5px 30px;
-}
-nav ul li h3 {
+    padding: 0px 30px;
     margin: 0px;
 }
 nav ul li a {
     display: block;
-    margin-left: 20px;
     padding: 5px;
-    color: var(--dark-green);
-    border-bottom: 2px solid var(--desat-green);
+    margin: 0px 20px;
+    color: var(--medium-green);
+    text-decoration: none;
+    transition: all 0.25s;
 }
 nav ul li a:hover {
-    color: white;
-    text-shadow: 0 0 8px #112515;
+    color: var(--dark-green);
+    border-bottom: 4px solid var(--dark-green);
+    letter-spacing: 0.1em;
+    font-weight: bold;
+}
+#activenav {
+    border-bottom: 4px solid var(--dark-green);
+    color: var(--dark-green);
+    transition: all 0.25s;
+    font-weight: bold;
+}
+#activenav:hover {
+    letter-spacing: 0.1em;
 }
 
 
 
 .page-container {
-    width: 80%;
-    max-width: 1400px;
+    width: 60%;
+    max-width: 1080px;
     min-width: 500px;
-    padding-right: 220px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 50px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
 }  
 
 .text-container {
-    max-width: 1080px;
-    min-width: 500px;
-    padding: 20px 50px;
-    display: grid;
-    grid-template-columns: 20% auto 20%;
-    padding: 0px 0px 20px 0px;
+    width: 100%;
     background-color: var(--light-green);
-    border-radius: 20px;
-    border: 4px solid black;
+    padding-bottom: 100px;
+    border-radius: 0px 0px 150px 150px;
 }
 #pagebanner {
     width: 100%;
-    grid-column: 1 / -1;
-    border-bottom: 4px solid black;
-    border-radius: 16px 16px 0px 0px;
+    border-radius: 150px 150px 0px 0px;
 }
+
 #page-header {
-    padding: 0px 100px 20px 100px;
-    grid-column: 1 / -1;
+    margin-left: 50px;
+}
+
+.main-content {
+    display: flex;
+    justify-content: space-between;
 }
 .content-item {
     padding: 0px 20px;
 }
 #left-container {
-    flex-basis: 0;
-    flex-grow: 1;
-    justify-content: center;
+    width: 20%;
 }
 #middle-container {
-    flex-basis: 0;
-    flex-grow: 3;
-    border-left: 4px double var(--desat-green);
-    border-right: 4px double var(--desat-green);
+    width: 50%;
+    border-left: 4px double var(--medium-green);
+    border-right: 4px double var(--medium-green);
 }
 #right-container {
-    flex-basis: 0;
-    flex-grow: 1;
+    width: 20%;
 }
 
 #pfp {
@@ -114,7 +123,7 @@ nav ul li a:hover {
     margin-right: auto;
     max-width: 300px;
     padding: 0px 0px 20px 0px;
-    border-bottom: 5px dotted var(--desat-green);
+    border-bottom: 5px dotted var(--medium-green);
 }
 
 #profile {
@@ -156,7 +165,7 @@ nav ul li a:hover {
 }
 
 .blurb {
-    border-bottom: 5px dotted var(--desat-green);
+    border-bottom: 5px dotted var(--medium-green);
 }
 .blurb h3 {
     margin: 8px 0px 5px 0px;
@@ -182,7 +191,7 @@ summary {
 }
 
 .book {
-    border-bottom: 5px dotted var(--desat-green);
+    border-bottom: 5px dotted var(--medium-green);
     padding: 10px 0px;
     display: flex;
 }
