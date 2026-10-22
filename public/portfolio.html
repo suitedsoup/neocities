@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>sortasoapysoups portfolio</title>
     <link rel="stylesheet" href="style.css" type="text/css" media="all">
+    <script src="script.js" defer></script>
   </head>
   <body>
     <div class="page-container">
@@ -33,22 +34,179 @@
 
             <div class="main-content">
 
-                <div class="content-item" id="left-container">
+                <div class="content-item" id="left-container-small">
+                    <div id="skilldiv">
+                        <details open="true">
+                            <summary>languages</summary>
+                            <div class="skill">
+                                <p>c#</p>
+                                <div class="progress-container">
+                                    <div class="progress-value value-80"></div>
+                                </div>
+                            </div>
+                            <div class="skill">
+                                <p>html/css/js</p>
+                                <div class="progress-container">
+                                    <div class="progress-value value-60"></div>
+                                </div>
+                            </div>
+                            <div class="skill">
+                                <p>gdscript</p>
+                                <div class="progress-container">
+                                    <div class="progress-value value-10"></div>
+                                </div>
+                            </div>
+                            <div class="skill">
+                                <p>glsl</p>
+                                <div class="progress-container">
+                                    <div class="progress-value value-10"></div>
+                                </div>
+                            </div>
+                        </details>
+                        <details open="true">
+                            <summary>programs</summary>
+                            <div class="skill">
+                                <p>unity</p>
+                                <div class="progress-container">
+                                    <div class="progress-value value-80"></div>
+                                </div>
+                            </div>
+                            <div class="skill">
+                                <p>photoshop</p>
+                                <div class="progress-container">
+                                    <div class="progress-value value-70"></div>
+                                </div>
+                            </div>
+                            <div class="skill">
+                                <p>blender</p>
+                                <div class="progress-container">
+                                    <div class="progress-value value-60"></div>
+                                </div>
+                            </div>
+                            <div class="skill">
+                                <p>maya</p>
+                                <div class="progress-container">
+                                    <div class="progress-value value-40"></div>
+                                </div>
+                            </div>
+                            <div class="skill">
+                                <p>3ds max</p>
+                                <div class="progress-container">
+                                    <div class="progress-value value-40"></div>
+                                </div>
+                            </div>
+                            <div class="skill">
+                                <p>substance painter</p>
+                                <div class="progress-container">
+                                    <div class="progress-value value-40"></div>
+                                </div>
+                            </div>
+                            <div class="skill">
+                                <p>3d coat</p>
+                                <div class="progress-container">
+                                    <div class="progress-value value-30"></div>
+                                </div>
+                            </div>
+                            <div class="skill">
+                                <p>godot</p>
+                                <div class="progress-container">
+                                    <div class="progress-value value-20"></div>
+                                </div>
+                            </div>
+                        </details>
+                        <details open="true">
+                            <summary>3d</summary>
+                            <div class="skill">
+                                <p>hard modelling</p>
+                                <div class="progress-container">
+                                    <div class="progress-value value-70"></div>
+                                </div>
+                            </div>
+                            <div class="skill">
+                                <p>texturing</p>
+                                <div class="progress-container">
+                                    <div class="progress-value value-60"></div>
+                                </div>
+                            </div>
+                            <div class="skill">
+                                <p>organic modelling</p>
+                                <div class="progress-container">
+                                    <div class="progress-value value-40"></div>
+                                </div>
+                            </div>
+                            <div class="skill">
+                                <p>rigging</p>
+                                <div class="progress-container">
+                                    <div class="progress-value value-20"></div>
+                                </div>
+                            </div>
+                            <div class="skill">
+                                <p>animation</p>
+                                <div class="progress-container">
+                                    <div class="progress-value value-10"></div>
+                                </div>
+                            </div>
+                        </details>
+                        <details open="true">
+                            <summary>2d</summary>
+                            <div class="skill">
+                                <p>pixel art</p>
+                                <div class="progress-container">
+                                    <div class="progress-value value-70"></div>
+                                </div>
+                            </div>
+                            <div class="skill">
+                                <p>digital painting</p>
+                                <div class="progress-container">
+                                    <div class="progress-value value-50"></div>
+                                </div>
+                            </div>
+                            <div class="skill">
+                                <p>character design</p>
+                                <div class="progress-container">
+                                    <div class="progress-value value-30"></div>
+                                </div>
+                            </div>
+                            <div class="skill">
+                                <p>animation</p>
+                                <div class="progress-container">
+                                    <div class="progress-value value-20"></div>
+                                </div>
+                            </div>
+                        </details>
+                    </div>
                 </div>
                 
-                <div class="content-item" id="middle-container">
-                    
-                    <div class="blurb">
-                        <h3>meme i had to make for class</h3>
-                        <div class="imgtext-sidebyside">
-                            <img src="resources/horsememe.jpg" alt="my horse deciding what to be scared of: tornadoes, lightning/thunder, wind knocking buckets over? nah. a piece of wood that hasn't been moved at all? omg so scary!">
-                            <p>idk guys i had to make this for class and upload it to a website so uh here ya go? funny funny because horse not scared of things horse should be scared of, but horse is absolutely downright terrified of nothing. like, hello?</p>
+                <div class="content-item" id="middle-container-big">
+                    <p>click on the images to view text, or click <a class="clickthis" onclick="showAllText()">this</a> to show all</p>
+
+                    <div class="horizontal-scroll-wrapper">
+                        
+                        <div class="portfolio-item" onclick="showText('port1')">
+                            <h3>"Running out of time”</h3>
+                            <p class="subtitle">Jan. 5th 2026, photography, personal project</p>
+                            <img src="resources/portfolio/key.JPG" alt="A broken clock leading to a blurry bell. It lay in a bed of bones and trinkets lost to time. Darker colors, cold lighting, deep shadows.">
+                            <p class="portfolio-text hide" id="port1">A broken clock leading to a blurry bell. It lay in a bed of bones and trinkets lost to time. The bells are getting louder. You're running out of time. Darker colors, cold lighting, deep shadows. Feels moody and dark. Small objects in a close composition makes you feel small, enclosed, like the lid of the box could lose on you and trap you in at any time. Tilted composition creates unease.</p>
+                        </div>
+                        <div class="portfolio-item" onclick="showText('port2')">
+                            <h3>“Unknown Skull”</h3>
+                            <p class="subtitle">Mar. 8th 2023, graphite, class project</p>
+                            <img src="resources/portfolio/skull.jpg" alt="A graphite drawing of an animal skull.">
+                            <p class="portfolio-text hide" id="port2">A graphite drawing of an animal skull on bristol board (20” x 26”). Proof of death was placed on our desks and we were told to draw it. This animal, who-knows-how-long-dead, may not be able to tell a story with sounds and expressions, but each crack and mark of its skull tells its own. I know not of animal skulls. Do the teeth say anything about the age? The broken and shattered nose, how it died or the trauma it endured? The empty eye sockets peered back at me the whole time. I captured every detail so someone else may be able to interpret it.</p>
+                        </div>
+                        <div class="portfolio-item" onclick="showText('port3')">
+                            <h3>"Blood Demon"</h3>
+                            <p class="subtitle">May 13th 2025, 3D model, class</p>
+                            <img src="resources/portfolio/crystalparasite.jpg" alt="horse/dragon-like creature covered in protruding crystals and splattered blood.">
+                            <p class="portfolio-text hide" id="port3">Sculpted, retopoed, and texture painted horse/dragon-like creature covered in protruding crystals and splattered blood. A small creature that gets into its victim's veins. It grows crystals to block blood cells from passing by so it can snack on them. Yum.</p>
                         </div>
                     </div>
                     
-                </div>
-                
-                <div class="content-item" id="right-container">
+                    <div class="blurb">
+                        <h2>3 artifacts curator's note</h2>
+                        <p>These three artifacts reflect my thoughts on the temporarily of life. Time running out, consistent themes of bones and the human body, and death cross all three of them. The first, the key, is the bells chiming in the distance. The knowledge that death is inevitable. The second, the skull, is the aftermath. When our flesh has melted away and shown us to be only what we were on the inside. How we act in our day-to-day lives are temporary. The impacts we leave are what matters. Finally, the third, the crystalized blood demon, is the morbid reality that death can be something small and unseen, able to strike at any moment. There is no way of knowing if tomorrow will come or not. It's important to live how we want to be remembered, and leave lasting, positive impacts on those around us. The three artifacts being different mediums also reflects my views; we should spread ourselves out - but not thinly - to experience all life has to give us. Photography, graphite, and 3D modelling. Vastly different forms of creativity. The more experiences we have, the more it shapes us as people, writers, creatives, and thinkers. I'm currently reading The Secret History by Donna Tartt, and Richard's self-proclaimed "fatal flaw" resonated with me. "A morbid longing for the picturesque at all costs." How we choose to view the world warps and distorts our perspective and lasting memory, whether that be positive, or not.</p>
+                    </div>
+                    
                 </div>
             
             </div>

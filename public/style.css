@@ -14,6 +14,10 @@ h1, h2, h3, h4, details {
 p, ul, a {
     font-family: "hoss-round-xnarrow", "arial", sans-serif;
 }
+.clickthis {
+    text-decoration: underline;
+    color: var(--dark-green);
+}
 body {
   background-color: var(--medium-green); /*#1d0b00;*/
   background-image: url("resources/dotbackground.png");
@@ -27,12 +31,14 @@ body {
 nav {
     background-color: var(--light-green);
     position: sticky;
+    top: 0px;
     width: auto;
     min-width: 220px;
     display: flex;
     flex-direction: column;
     border-top: 4px solid black;
     border-bottom: 4px solid black;
+    box-shadow: 0px 4px 10px -3px var(--dark-green);
 }
 nav h3 {
     margin: 2px auto;
@@ -106,14 +112,27 @@ nav ul li a:hover {
 }
 #left-container {
     width: 20%;
+    display: block;
+}
+#left-container-small {
+    width: 20%;
+    display: block;
 }
 #middle-container {
     width: 50%;
+    display: block;
     border-left: 4px double var(--medium-green);
     border-right: 4px double var(--medium-green);
 }
+#middle-container-big {
+    width: 70%;
+    display: block;
+    border-left: 4px double var(--medium-green);
+    margin-right: 10px;
+}
 #right-container {
     width: 20%;
+    display: block;
 }
 
 #pfp {
@@ -170,6 +189,9 @@ nav ul li a:hover {
 .blurb h3 {
     margin: 8px 0px 5px 0px;
 }
+.blurb h4 {
+    margin: 0px;
+}
 .blurb p {
     margin: 0px 0px 10px 0px;
 }
@@ -213,15 +235,161 @@ summary {
 .featuredbook a {
     color: #0a0106;
 }
-
-.imgtext-sidebyside {
+/*///////////////////////////////////////////////////////
+    // Portfolio \\ 
+///////////////////////////////////////////////////////*/
+.horizontal-scroll-wrapper {
     display: flex;
+    flex-wrap: nowrap;
+    overflow: scroll;
+    scrollbar-color: var(--dark-green) var(--light-green);
+    border-bottom: 5px dotted var(--medium-green);
 }
-.imgtext-sidebyside img {
-    height: 200px;
-    margin-right: 10px;
+/*.portfolio-item {
+    flex: 0 0 auto;
+    display: inline-grid;
+    max-width: 90%;
+    min-width: 0;
+    grid-template-areas:
+    'title title'
+    'subtitle subtitle'
+    'image portfolio-text';
+    padding: 10px;
+}
+
+.portfolio-item h3 {
+    grid-area: title;
+    margin: 0px;
+}
+.portfolio-item .subtitle {
+    grid-area: subtitle;
+    margin: 0px;
+    margin-bottom: 1em;
+}
+.portfolio-item img {
+    grid-area: image;
+    width: 200px;
+    margin-right: 1em;
+}
+.portfolio-item .portfolio-text {
+    grid-area: portfolio-text;
+    display: none;
+}*/
+.portfolio-item {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-width: 300px;
+    padding: 10px;
     margin-bottom: 10px;
 }
+
+.portfolio-item h3 {
+    margin: 0px;
+}
+.portfolio-item .subtitle {
+    margin: 0px;
+    margin-bottom: 1em;
+}
+.portfolio-item img {
+    margin-right: 1em;
+    max-height: 150px;
+    object-fit: contain;
+}
+.portfolio-item .portfolio-text {
+    transition: all 0.5s ease-out;
+    visibility: visible;  
+    font-size: 1em;
+}
+
+.hide {
+    visibility: hidden;
+    transition: all 1s ease-out;
+    opacity: 0;  
+    font-size: 0.1em !important;
+}
+
+/*///////////////////////////////////////////////////////
+    // Progress Bars \\ 
+///////////////////////////////////////////////////////*/
+.skill {
+  margin-bottom: 0.5em;
+  margin-left: 2em;
+  margin-right: 2em;
+}
+.skill p {
+  text-transform: none;
+  font-weight: bold;
+  margin: 0px;
+}
+.progress-container {
+  width: 100%;
+  max-width: 350px;
+  height: 0.75em;
+  background: var(--medium-green);
+  overflow: hidden;
+  border-radius: 5px;
+}
+.progress-value {
+  height: 0.75em;
+  float: left;
+  background: var(--dark-green);
+}
+.value-00 { width: 0; }
+.value-10 { width: 10%; }
+.value-20 { width: 20%; }
+.value-30 { width: 30%; }
+.value-40 { width: 40%; }
+.value-50 { width: 50%; }
+.value-60 { width: 60%; }
+.value-70 { width: 70%; }
+.value-80 { width: 80%; }
+.value-90 { width: 90%; }
+.value-100 { width: 100%; }
+
+
+/*///////////////////////////////////////////////////////
+    // Wishlist Bars \\ 
+///////////////////////////////////////////////////////*/
+.full-page {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+.full-page h2 {
+    margin-bottom: 0px;
+}
+.full-page h3 {
+    margin-bottom: 0px;
+}
+.full-page h4 {
+    margin-bottom: 0px;
+}
+.full-page p {
+    margin: 0.5em;
+}
+.color-squares {
+    border: 4px dotted var(--dark-green);
+    border-radius: 14px;
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.color-square {
+    border-radius: 10px;
+    width: 6em;
+    height: 3em;
+    background-color: white;
+    margin: 5px;
+    border: 2px solid black;
+}
+
+#col1 { background: linear-gradient(90deg, white 0%, black 100%); }
+#col2 { background: linear-gradient(90deg,rgba(255, 255, 255, 1) 0%, rgba(212, 177, 142, 1) 21%, rgba(64, 33, 10, 1) 94%, rgba(31, 6, 2, 1) 100%); }
+#col3 { background: linear-gradient(90deg,rgba(255, 255, 255, 1) 0%, rgba(194, 219, 193, 1) 16%, rgba(131, 171, 130, 1) 43%, rgba(38, 74, 32, 1) 76%, rgba(2, 26, 0, 1) 96%, rgba(0, 0, 0, 1) 100%); }
+#col4 { background: linear-gradient(90deg,rgba(255, 255, 255, 1) 0%, rgba(245, 206, 206, 1) 16%, rgba(64, 17, 17, 1) 100%); }
+#col5 { background: linear-gradient(90deg,rgba(255, 255, 255, 1) 0%, rgba(200, 184, 204, 1) 16%, rgba(33, 17, 64, 1) 100%); }
 
 /*@media (max-width: 600px) {
     .page-container { width: 300px; }
