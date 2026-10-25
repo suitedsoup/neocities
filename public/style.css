@@ -80,7 +80,7 @@ nav ul li a:hover {
 .page-container {
     width: 60%;
     max-width: 1080px;
-    min-width: 500px;
+    min-width: 400px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 50px;
@@ -363,9 +363,17 @@ summary {
 }
 .full-page h4 {
     margin-bottom: 0px;
+    margin-left: 0.35em;
 }
 .full-page p {
     margin: 0.5em;
+}
+.full-page h4 a {
+    font-size: 1.2em;
+    font-family: "olivita", "verdana", sans-serif;
+}
+.full-page ul {
+    margin-top: 0px;
 }
 .color-squares {
     border: 4px dotted var(--dark-green);
