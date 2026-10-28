@@ -113,18 +113,18 @@ nav ul li a:hover {
     margin-left: 50px;
 }
 
-.main-content {
+.main-content, .main-content-library {
     display: flex;
     justify-content: space-between;
 }
-.content-item {
+.content-item, .content-item-library {
     padding: 0px 20px;
 }
 #left-container {
     width: 20%;
     display: block;
 }
-#left-container-small {
+#left-container-small, #left-container-small-library {
     width: 20%;
     display: block;
 }
@@ -134,7 +134,7 @@ nav ul li a:hover {
     border-left: 4px double var(--medium-green);
     border-right: 4px double var(--medium-green);
 }
-#middle-container-big {
+#middle-container-big, #middle-container-big-library {
     width: 70%;
     display: block;
     border-left: 4px double var(--medium-green);
@@ -468,39 +468,39 @@ h2:target {
 #col4 { background: linear-gradient(90deg,rgba(255, 255, 255, 1) 0%, rgba(245, 206, 206, 1) 16%, rgba(64, 17, 17, 1) 100%); }
 #col5 { background: linear-gradient(90deg,rgba(255, 255, 255, 1) 0%, rgba(200, 184, 204, 1) 16%, rgba(33, 17, 64, 1) 100%); }
 
+@media (max-width: 1200px) {#left-container-small { width: 30%; }
+    #middle-container-big {
+        width: 60%;
+    }
+}
+@media (max-width: 930px) {
+    #bookshelf h3 { font-size: 0.9em; }
+    #book-blurb img {  float: none; }
+    .main-content {
+        display: flex;
+        flex-direction: column;
+    }
+    .content-item {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #left-container-small { width: 80%; }
+    #middle-container-big {
+        border-left: none;
+        width: 80%;
+        margin-right: 0px;
+    }
+    #middle-container {
+        width: 80%;
+        border: none;
+    }
+    #left-container { width: 80%; }
+    #right-container { width: 80%; }
+    .rearrange-second { order: 2 }
+    .rearrange-first { order: 1 }
+}
+@media (max-width: 768px) {
+}
 @media (max-width: 600px) {
-    #bookshelf h3 {
-        font-size: 0.9em;
-    }
-    #book-blurb img {
-        float: none;
-    }
 }
-@media (min-width: 600px) {
-    #bookshelf h3 {
-        font-size: 0.9em;
-    }
-    #book-blurb img {
-        float: none;
-    }
-}
-@media (min-width: 768px) {
-    #bookshelf h3 {
-        font-size: 0.9em;
-    }
-    #book-blurb img {
-        float: none;
-    }
-}
-@media (min-width: 930px) {
-    #bookshelf h3 {
-        font-size: 1.25em;
-    }
-    #book-blurb img {
-        float: left;
-    }
-}
-@media (min-width: 992px) {
-}
-@media (min-width: 1200px) {
-}
+
