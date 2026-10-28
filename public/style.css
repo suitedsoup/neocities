@@ -357,6 +357,49 @@ summary {
 .value-90 { width: 90%; }
 .value-100 { width: 100%; }
 
+/*///////////////////////////////////////////////////////
+    // Library \\ 
+///////////////////////////////////////////////////////*/
+.bookshelf-row {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: scroll;
+    scrollbar-color: var(--dark-green) var(--light-green);
+    overflow: scroll;
+    border-bottom: 4px double var(--dark-green);
+    padding-bottom: 15px;
+}
+.spine-container {
+    height: 230px;
+    display: flex;
+    align-items: last baseline;
+}
+#bookshelf img {
+    height: 100%;
+    object-fit: contain;
+}
+.spine {
+    height: 200px;
+    padding: 0px 2px;
+    transition: all 0.2s ease-in-out;
+}
+.spine:hover {
+    height: 220px;
+    padding: 0px 5px;
+    transition: all 0.2s ease-in-out;
+}
+
+#book-blurb img {
+    height: 255px;
+    float: left;
+    padding: 0px 10px 10px 0px;
+}
+#book-blurb h2, h3, #book-genre, #book-pages, p {
+    margin: 0px;
+}
+#book-blurb h4 {
+    margin-bottom: 0px;
+}
 
 /*///////////////////////////////////////////////////////
     // Wishlist Bars \\ 
@@ -425,23 +468,39 @@ h2:target {
 #col4 { background: linear-gradient(90deg,rgba(255, 255, 255, 1) 0%, rgba(245, 206, 206, 1) 16%, rgba(64, 17, 17, 1) 100%); }
 #col5 { background: linear-gradient(90deg,rgba(255, 255, 255, 1) 0%, rgba(200, 184, 204, 1) 16%, rgba(33, 17, 64, 1) 100%); }
 
-/*@media (max-width: 600px) {
-    .page-container { width: 300px; }
-    .text-container { flex-direction: column; }
+@media (max-width: 600px) {
+    #bookshelf h3 {
+        font-size: 0.9em;
+    }
+    #book-blurb img {
+        float: none;
+    }
 }
 @media (min-width: 600px) {
-    .page-container { width: 400px; }
-    .text-container { flex-direction: column; }
+    #bookshelf h3 {
+        font-size: 0.9em;
+    }
+    #book-blurb img {
+        float: none;
+    }
 }
 @media (min-width: 768px) {
-    .page-container { width: 600px; }
-    .text-container { flex-direction: column; }
+    #bookshelf h3 {
+        font-size: 0.9em;
+    }
+    #book-blurb img {
+        float: none;
+    }
+}
+@media (min-width: 930px) {
+    #bookshelf h3 {
+        font-size: 1.25em;
+    }
+    #book-blurb img {
+        float: left;
+    }
 }
 @media (min-width: 992px) {
-    .page-container { width: 800px; }
-    .text-container { flex-direction: row; }
 }
 @media (min-width: 1200px) {
-    .page-container { width: 1080px; }
-    .text-container { flex-direction: row; }
-}*/
+}

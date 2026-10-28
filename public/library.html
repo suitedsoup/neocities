@@ -8,6 +8,7 @@
          If you include the next line in all your web pages, they will all share the same look.
          This makes it easier to make new pages for your site. -->
     <link rel="stylesheet" href="style.css" type="text/css" media="all">
+    <script src="script.js"></script>
   </head>
   <body>
     <div class="page-container">
@@ -34,17 +35,37 @@
 
             <div class="main-content">
 
-                <div class="content-item" id="left-container">
-                    <h2>quick jump</h2>
-                    <div class="readlinks">
-                        <p><a href="#currentlyreading">currently reading</a></p>
-                        <p><a href="#wanttoread">want to read</a></p>
-                        <p><a href="#finished">finished</a></p>
+                <div class="content-item" id="left-container-small">
+                    <div id="bookshelf">
+                        <h3>Currently Reading</h3>
+                        <div class="bookshelf-row" id="currently-reading">
+                            <div class="spine-container" id="secrethistory-spine" onClick="clickSpine('the secret history')">
+                                <div class="spine"><img src="resources/books/ths-spine.jpg"></div>
+                            </div>
+                        </div>
+                        <h3>TBR</h3>
+                        <div class="bookshelf-row" id="want-to-read">
+                            <div class="spine-container" id="neuromancer-spine" onClick="clickSpine('neuromancer')">
+                                <div class="spine"><img src="resources/books/neuromancer-spine.jpg"></div>
+                            </div>
+                            <div class="spine-container" id="jonathanstrange-spine" onClick="clickSpine('jonathan strange')">
+                                <div class="spine"><img src="resources/books/jonathanstrange-spine.jpg"></div>
+                            </div>
+                            <div class="spine-container" id="babel-spine" onClick="clickSpine('babel')">
+                                <div class="spine"><img src="resources/books/babel-spine.jpg"></div>
+                            </div>
+                        </div>
+                        <h3>Finished</h3>
+                        <div class="bookshelf-row" id="finished">
+                            <div class="spine-container" id="projecthailmary-spine" onClick="clickSpine('project hail mary')">
+                                <div class="spine"><img src="resources/books/projecthailmary-spine.jpg"></div>
+                            </div> 
+                        </div>
                     </div>
                 </div>
                 
-                <div class="content-item" id="middle-container">
-                    <h2>library</h2>
+                <div class="content-item" id="middle-container-big">
+                    <!-- <h2>library</h2>
                     <details open="true" id="currentlyreading">
                         <summary>currently reading</summary>
                         <div class="book" id="thesecrethistory">
@@ -128,13 +149,18 @@
                             </div>
                         </div>
                         
-                    </details>
-                </div>
-                
-                <div class="content-item" id="right-container">
-                    <h2>featured book</h2>
-                    <div class="featuredbook">
-                        <p><a href="#projecthailmary">project hail mary</a></p>
+                    </details> -->
+
+                    <div id="book-blurb">
+                        <img id="book-img" src="resources/books/thesecrethistory.jpg" alt="the secret history book cover">
+                        <h2 id="book-title">The Secret History</h2>
+                        <h3 id="book-author">Donna Tartt</h3>
+                        <p id="book-genre">Dark Academia, Fiction, Mystery, Classics</p>
+                        <p id="book-pages">559 pgs</p>
+                        <h4>Summary</h4>
+                        <p id="book-summary">"Under the influence of their charismatic classics professor, a group of clever, eccentric misfits at an elite New England college discover a way of thinking and living that is a world away from the humdrum existence of their contemporaries. But when they go beyond the boundaries of normal morality they slip gradually from obsession to corruption and betrayal, and at last—inexorably—into evil."</p>
+                        <h4>My Notes</h4>
+                        <p id="book-notes">So I had to read this for class, and let's just say I think it's gotten me out of my reading slump. I didn't have it at first and had to find a copy online until it came in, in which it said that Richard grew up in "Piano, California," and not "Plano, California." Very funny mistake to make when I went to class and we started talking about Plano and not Piano.<br><br>I didn't think I'd really like it at first - Richard just keeps narrating and saying shit about how he longed to be an orphan like the twins. I mocked him and his narration. Now, I've come to love it. I love this group of weirdos bonding over morally questionable acts. I'm almost done and I can't wait to see how this dumpster fire of a friend group turns out in the end!<br><br>Rip Bunny Corcoran, you would've loved ragebaiting</p>
                     </div>
                 </div>
             
